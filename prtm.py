@@ -24,3 +24,9 @@ mass = {
 }
 
 print(sum(mass[x] for x in s))
+
+# With a for loop
+total = 0.0
+for x in s:
+    total += mass[x]
+print(total)
