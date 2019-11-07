@@ -1,5 +1,8 @@
+#!/usr/bin/env python
+
 import sys
 from Bio import SeqIO
+from os.path import exists
 
 from dark.aa import CODONS
 
@@ -77,7 +80,11 @@ if len(sys.argv) != 2:
     print('I need a filename!', file=sys.stderr)
     sys.exit(1)
 else:
-    seq = SeqIO.read(sys.argv[1], 'fasta')
-    sequence = str(seq.seq)
+    arg = sys.argv[1]
+    if exists(arg):
+        seq = SeqIO.read(arg, 'fasta')
+        sequence = str(seq.seq)
+    else:
+        sequence = arg
     for orf in sorted(allOrfs(sequence)):
         print(orf)
