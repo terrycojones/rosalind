@@ -15,8 +15,8 @@ for record in SeqIO.parse(sys.argv[1], 'fasta'):
     else:
         assert len(sequence) == sequenceLen
 
-    for i, nt in enumerate(sequence):
-        counts[i][nt] += 1
+    for index, nt in enumerate(sequence):
+        counts[index][nt] += 1
 
 print(''.join(counts[i].most_common()[0][0]
               for i in range(sequenceLen)))

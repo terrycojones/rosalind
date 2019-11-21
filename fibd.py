@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# WARNING: This code is not correct!!!
+
 from sys import argv
 
 LITTER_SIZE = 1
@@ -19,16 +21,14 @@ def aliveIn(month):
 print('months', months, 'lifespan', lifespan)
 
 for month in range(3, months + 1):
-    if month > 2:
-        die = aliveIn(month - lifespan)
-        living = aliveIn(month - 1)
-        mature = aliveIn(month - 2)
-        born = mature * LITTER_SIZE
-        total = living - die + born
-        print(f'calculating month {month}: counts={counts[1:]}, '
-              f'living={living}, die={die}, mature={mature}, born={born}, '
-              f'total={total}.')
-        counts.append(total)
+    die = aliveIn(month - (lifespan + 1))
+    living = aliveIn(month - 1)
+    mature = aliveIn(month - 2)
+    born = mature * LITTER_SIZE
+    total = living - die + born
+    print(f'calculating month {month}: counts={counts[1:]}, '
+          f'living={living}, die={die}, mature={mature}, born={born}, '
+          f'total={total}.')
+    counts.append(total)
 
-# print('finally', counts[1:])
 print(counts[-1])
