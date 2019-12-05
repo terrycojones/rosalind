@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $ time lcsm-smarter.py rosalind_lcsm.txt
+# $ time lcsm-smarter.py lcsm.fasta
 # GGTTATACCTGTGGAATCTAGAGACGCGCACGGGGAAGGAGCGAGTCGGGCTCCCAAGAAAGGCAGTGGCACACATCCCTTCTATC
 # 21.58user 0.01system 0:21.60elapsed
 

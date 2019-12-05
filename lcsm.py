@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
 # This is simplistic and memory intensive!  An easy way to make it faster
-# would be to work down from the longest possible substring length.
+# (but still very naive) would be to work down from the longest possible
+# substring length. See lcsm-smarter.py for that approach (a bit faster and
+# definitely using less memory).
 
-# $ time lcsm.py rosalind_lcsm.txt
+# $ time lcsm.py lcsm.fasta
 # GGTTATACCTGTGGAATCTAGAGACGCGCACGGGGAAGGAGCGAGTCGGGCTCCCAAGAAAGGCAGTGGCACACATCCCTTCTATC
 # 26.16user 0.52system 0:26.69elapsed
 
