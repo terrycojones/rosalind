@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 
-# This is simplistic and memory intensive!  One quick way to make it faster
+# This is simplistic and memory intensive!  An easy way to make it faster
 # would be to work down from the longest possible substring length.
+
+# $ time lcsm.py rosalind_lcsm.txt
+# GGTTATACCTGTGGAATCTAGAGACGCGCACGGGGAAGGAGCGAGTCGGGCTCCCAAGAAAGGCAGTGGCACACATCCCTTCTATC
+# 26.16user 0.52system 0:26.69elapsed
+
 
 import sys
 from Bio import SeqIO
